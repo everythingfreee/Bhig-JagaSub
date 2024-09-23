@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body">
+    <!----------------------------Form--------------------------------->
+    <!----------------------------Sigin-Up----------------------------->
+
+    <div class="container" id="signUp">
+      <h1 class="form-title">Register</h1>
+      <br /><br />
+      <form id="registerForm">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="First-Name"
+            required
+          />
+          <label for="fname">First Name</label>
+        </div>
+        <br />
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            placeholder="Last-Name"
+            required
+          />
+          <label for="lname">Last Name</label>
+        </div>
+        <br />
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            placeholder="Last-Name"
+            required
+          />
+          <label for="lname">User Name</label>
+        </div>
+        <br />
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Email-Address"
+            required
+          />
+          <label for="email">Email Address</label>
+        </div>
+        <br />
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <label for="password">Password</label>
+        </div>
+        <br />
+        <input type="submit" class="btn" value="Sign-Up" id="sig" />
+      </form>
+
+      <p class="or">------------or------------</p>
+      <br /><br />
+      <div class="icons">
+        <i class="fab fa-google"></i>
+        <i class="fab fa-facebook"></i> <br /><br />
+        <div class="links">
+          <p>Already Have Account ?</p>
+          <button id="signInButton">Login</button>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------Sigin-in----------------------------->
+    <div class="container" id="signIn" style="display: none;">
+      <form id="signInForm">
+        <h1 class="form-title">Sign In</h1>
+        <br />
+        <br />
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="text"
+            name="signInEmail"
+            id="signInEmail"
+            placeholder="Email-Address"
+            required
+          />
+          <label for="signInEmail">Email Address</label>
+        </div>
+        <br />
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            name="signInPasswordS"
+            id="signInPassword"
+            placeholder="Password"
+            required
+          />
+          <label for="signInPassword">Password</label>
+        </div>
+        <input type="submit" class="btn" value="Login" />
+        <p class="recover">
+          <a href="">Recover Password</a>
+        </p>
+      </form>
+      <p class="or">------------or------------</p>
+      <br /><br />
+      <div class="icons">
+        <i class="fab fa-google"></i>&nbsp;&nbsp;&nbsp;
+        <i class="fab fa-facebook"></i><br /><br />
+        <div class="links">
+          <p>Don't Have Account Yet?</p>
+          <button id="signUpButton">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

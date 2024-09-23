@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="loading-wrapper" id="loading">
+        <div class="loader"> 
+            <img class="loader" src="home.jpeg" width="100" alt="">
+        </div>
+    </div>
+    <div id="profilePage">
+        <div class="hero">
+            <div class="card">
+                <p>Attach Your Profile Picture</p>
+                <img src="home.jpeg" alt="" id="profileImg">
+                <label id="label" for="imagesChange">Upload Image</label>
+                <input type="file" id="imagesChange"accept="image/jpeg, image/png, image/jpg">
+            </div>
+        </div>
+    </div>
+    
+    <div class="dash-main" id="dashMain">
+<!----------------Dashbord------------------------>    
+<div class="sideber-container">
+    <!----------------Dashbord Side bar------------------------>    
+            <div id="mySidebar" class="sidebar" >
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#" id="userFullName"></a>
+                <div class="general">
+                    <h4>General</h4>
+                    <ul>
+                        <li id="dashboard"><i class="fas fa-home"></i> Dashboard</li>
+                        <li id="bdata"><i class="fas fa-user"> </i> Buy Data</li>
+                        <li id="bairtime"><i class="fas fa-phone"></i> Buy Airtime</li>
+                        <li id="csub"><i class="fas fa-bolt"></i>Cable Sub</li>
+                        <li id="th"onclick="transactionHistory()"><i class="fas fa-calculator"> </i> Transaction History</li>
+                        <li id="profile"onclick="transactionHistory()"><i class="fas fa-user-o"> </i> Profile Page</li>
+                    <a href="index.html" style="margin: 0; padding: 0; text-decoration: none;">    <li id="th1"><i class="fas fa-sign-out"></i> Sign-out </li>
+                    </a>      
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <!----------------close function side bar------------------------>    
+        <div id="main">
+            <div class="header-C">
+                <div class="header">
+                    <div class="div" onclick="openNav()">
+                        <div id="iconic" class="iconic"></div>
+                        <div id="iconic1"class="iconic"></div>
+                        <div id="iconic2"class="iconic"></div>
+                    </div>
+                    <h1 class="H">Dashboard</h1>
+                    <div class="user-info"  id="user-info">
+                        <img id="avater" src="https://www.gravatar.com/avatar?d=mp&s=200" alt="Profile Picture">
+                        <p>Account</p>
+                    </div>
+                </div>
+        </div>
+        </div>
+    <!----------------Dashbord-main------------------------>    
+    <!----------------FUnd Wallet Section------------------------>    
+           <div class="dash-container" id="dashContainer">
+                            <div class="fund-container">
+                            <div class="fund-container">
+                                <div class="fund-box">
+                                   <h6>Welcome Back,</h6> 
+                                    <span id="userName"></span> !! <br><br>
+                                    <button  class="fWallet" id="fWallet8">Fund Wallet</button> <br> <br>
+                                    <div>Your Account Has Been Verified Successfully</div>
+                                </div>
+                                <div class="fund-box1" id="fundbox1">
+                                        <h5>Fund Wallet</h5>   
+                                        <form action="dashboard.html" id="addMoney" style="background-color: white;">
+                                            <span for="amount">Enter Amount:</span> 
+                                            <input placeholder="Fund Wallet" id="fundAmount" required></input> 
+                                            <button onclick="reg()" class="btn1" id="btn5">SUBMIT</button>     
+                                        </form>   
+                                </div>
+                                <div class="fund-box1">
+                                   <div class="h7">Wallet Balance</h7>
+                                   <div id="wBalance">N0</div>       
+                                </div>
+                            </div>
+                            </div>
+    <!----------------Services ------------------------>    
+                            <div class="box-container" id="boxCotainer">
+                                <div class="cont">
+                                    <div id="box1" class="box">
+                                        <i class="fas fa-wifi"></i> 
+                                        <h5>Buy Data</h5>
+                                    </div>
+                                    <div id="box2" class="box">
+                                        <i class="fas fa-phone"></i>
+                                        <h5>Buy Airtime </h5>
+                                    </div>
+                            </div>
+                            <div class="cont">
+                                        <div id="box1" class="box">                                        
+                                        <i class="fas fa-address-book"></i>
+                                            <h5>Airtime 2 Cash </h5>
+                                        </div>
+                                        <div id="box3" class="box">
+                                            <i class="fas fa-bolt"></i>
+                                            <h5>Electricity Bill</h5>
+                                        </div>
+                                </div>
+                                <div class="cont">
+                                            <div id="box1" class="box">
+                                                <i class="fas fa-print"></i>
+                                                <h5>Data Card Printing</h5>
+                                            </div>
+                                            <div id="box2" class="box">   
+                                            <i class="fas fa-cart-plus" onclick="alert('opps! Not Avaukable ')"></i>
+                                                <h5>Bonus Transfer</h5>
+                                            </div>
+                                    </div>   
+                            <div class="cont">
+                                <div id="box1" class="box"onclick="alert('opps! Not Avaukable ')">
+                                    <i class="fas fa-commenting"></i>
+                                    <h5>Bulk SMS </h5>
+                                </div>
+                                <div id="box2" class="box">    
+                                    <i class="fas fa-graduation-cap"onclick="alert('opps! Not Avaukable ')"></i>
+                                    <h5>Result Checker</h5>
+                                </div>
+                        </div>                       
+                                <div id="earnBox" class="earnBox">                                   
+                                    <h4>Invite Friends and earn</h4>
+                                    <h6>1%</h6>
+                                    <div class="earning">Your will Earn 1% on the person first Deposit</div> <br>
+                                    <span>file:///C:/Users/SNMUNG/Desktop/my%20project/index%20(1).html/</span><span id="userName2"></span> <br><br>    
+                                    <input type="text" placeholder="Referal Email"> <button id="referal" onclick="invite()">Invite</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+    </div>
+<br><br>
+<div class="buy-data-main" id="buyDataMain" >
+        <div class="network">
+            <div class="form">
+                <form action="">
+                    <select name="php" id="network" onchange="get(this.value)">
+                        <option  id="php">Choose Network</option>
+                        <option value="PHP">MTN</option>
+                        <option value="PHP">GLO</option>
+                        <option value="PHP">AIRTEL</option>
+                        <option value="PHP">9MOBILE</option>
+                </select>
+                </input>
+                </form>                
+            <div class="network">
+                <form action="">
+                    <select name="php" id="planType"  disabled onchange="getVa(this.value)">
+                        <option value="PHP" id="php1" >Select Your Plan Type</option>
+                        <option value="PHP">SME</option>
+                        <option value="PHP">GIFTING</option>
+                        <option value="PHP">CORPERATIVE GIFTING</option>
+                </select>
+                </input>
+                </form>
+            </div>
+            <div class="network">
+                <form action="">
+                    <select name="php" id="amount" disabled onchange="getAm(this.value)">
+                        <option value="" id="" >Select Amount   </option>
+                        <option value="PHP">500MB = &#8358; 200 - 30days   </option>
+                        <option value="PHP">1gb = &#8358; 350 - 30days   </option>
+                        <option value="PHP">2gb = &#8358; 700 - 30days   </option>
+                        <option value="PHP">3gb = &#8358; 1050 - 30days   </option>
+                        <option value="PHP">5gb = &#8358; 1600 - 30days   </option>
+                        <option value="PHP">10gb = &#8358; 3200 - 30days   </option>
+                        <option value="PHP">20gb = &#8358; 6400 - 30days   </option>
+                </select>
+                    <div class="input-buydata">
+                        <input type="number" placeholder="Phone Number" required><br> <br>
+                        <input type="password" placeholder="Pin" required id="pin"><br><br>
+                        <div class="chebox">
+                            <span>Bypass Number</span><input type="checkbox" class="cheackbox">                       
+                        </div>
+                        <button onclick="sub()" type="submit"  id="submit" class="submit" required>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="buy-data-main" id="airtimePage" >
+    <div class="network">
+        <div class="form">
+            <form action="">
+                <select name="php" id="plan" onchange="getAir(this.value)">
+                    <option value="" id="sNetwork" >Select Network</option>
+                    <option value="PHP">MTN</option>
+                    <option value="PHP">GLO</option>
+                    <option value="PHP">AIRTEL</option>
+                    <option value="PHP">9MOBILE</option>
+            </select>
+            </input>
+            </form>         
+        <div class="network">
+            <form action="">
+                <select name="php" id="pType" disabled onchange="getAirtime(this.value)" >
+                    <option value="" id="php" >Plan Type</option>
+                    <option value="PHP">VTU</option>
+                    <option value="PHP">GIFTING</option>
+            </select>
+            </input>
+            </form>
+        </div>
+        <div class="network">
+            <form action="">
+                <div class="input-buydata">
+                    <input type="number" placeholder="Phone Number" required><br> <br>
+                    <input type="password" placeholder="Pin" required id="pin"><br><br>
+                    <div class="chebox">
+                        <span>Bypass Number</span><input type="checkbox" class="cheackbox">                    
+                    </div>
+                    <input onclick="sub()" type="submit" value="submit" id="submit" required>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<div class="buy-data-main" id="CableSUb" >
+    <div class="network">
+        <div class="form">
+            <form action="">
+            </input>
+            </form>
+        <div class="network">
+            <form action="">
+                <select name="php" id="" >
+                    <option value="PHP" id="php" disabled="disabled">Plan Type</option>
+                    <option value="PHP">GOTV</option>
+                    <option value="PHP">STARTIME</option>
+                    <option value="PHP">DSTV</option>
+            </select>
+            </input>
+            </form>
+        </div>
+        <div class="network">
+            <form action="">
+                <div class="input-buydata">
+                    <input type="number" placeholder="Cable Name" required><br> <br>
+                    <input type="number" placeholder="IUC NUMBER" required><br> <br>
+                    <input type="password" placeholder="Transaction Pin" required id="pin"><br><br>
+                    <div class="chebox">
+                        <span>Bypass Number</span><input type="checkbox" class="cheackbox">
+                    </div>
+                    <input onclick="sub()" type="submit" value="submit" id="submit" required>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script>
+    
+    let profileImg= document.getElementById("profileImg");
+    let imagesChange =document.getElementById("imagesChange");
+    let avater =document.getElementById("avater");
+    imagesChange.onchange = function(){
+        localStorage.setItem('profileImg', profileImg)
+    
+        profileImg.src = URL.createObjectURL(imagesChange.files[0]);
+        avater.src = URL.createObjectURL(imagesChange.files[0]);
+
+    }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('profileImg').textContent = ` ${profileImg}`;
+        });
+
+
+
+
+        ///fund  alert
+const btn5 = document.getElementById("btn5");
+const fWallet = document.getElementById("fWallet8");
+const fundbox1 = document.getElementById("fundbox1");
+fWallet.addEventListener('click', function() {
+    fundbox1.style.display = "block";
+})
+function invite(){
+    Swal.fire({
+  position: "center",
+  icon: "success",
+  title: "invitation Link Has Succesfully Send to his Email",
+  showConfirmButton: false,
+  timer: 2500
+});               
+}
+function reg(){
+    location.reload();
+    Swal.fire({
+  title: "Wallet Fund Success Full",  
+  width: 600,
+  padding: "3em",
+  color: "#716add",
+  background: "#fff url(/images/trees.png)",
+  backdrop: `
+    rgba(0,0,123,0.4)
+    url("/images/nyan-cat.gif")
+    left top
+    no-repeat
+  `
+});
+}
+//Ballance
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "15em";
+            document.getElementById("main").style.marginLeft = "15em";
+            document.getElementById("mySidebar").style.transition = "1s";
+            document.getElementById("main").style.transition = "3s";
+            document.getElementById("main").style.width ="40vw";
+            document.getElementById("iconic").style.backgroundColor= "transparent";
+            document.getElementById("iconic1").style.backgroundColor= "transparent";
+            document.getElementById("iconic2").style.backgroundColor= "transparent";
+            document.getElementById("user-info").style.marginLeft= "";
+            document.getElementById("buyDataMain").style.marginLeft="4em";
+            document.getElementById("dashContainer").style.marginLeft = "1em";
+            document.getElementById('profilePage').style.marginLeft = "14em";
+            document.getElementById('profilePage').style.marginTop = "10em";
+
+        }
+        function closeNav() {
+            document.getElementById('profilePage').style.marginLeft = "2em";
+
+            document.getElementById("main").style.width ="90%";
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+            document.getElementById("iconic").style.display= "block";
+            document.getElementById("dashContainer").style.marginLeft = "0";
+            document.getElementById("dashContainer").style.transition= "3s";
+            document.getElementById("iconic").style.backgroundColor= "white";
+            document.getElementById("iconic1").style.backgroundColor= "white";
+            document.getElementById("iconic2").style.backgroundColor= "white";
+        }
+        document.getElementById('addMoney').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent form from submitting the traditional way
+    const fundAmount = document.getElementById('fundAmount').value;
+    localStorage.setItem('register_fundAmount', fundAmount)
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const fname = localStorage.getItem('register_fname');
+            const fundAmount = localStorage.getItem('register_fundAmount');
+            const lname = localStorage.getItem('register_lname');
+            const email = localStorage.getItem('register_email');
+            const userName =localStorage.getItem('register_userName');
+            document.getElementById('userName').textContent = `${userName}`;
+            document.getElementById('wBalance').textContent ="N"+ `${fundAmount}`;
+            document.getElementById('userName2').textContent = `${userName}`;            
+            document.getElementById('userFullName').textContent = ` ${fname} ${lname}`;
+            document.getElementById('userEmail').textContent = ` ${email}`;
+        });
+//------------------------------------Buy data------------------------
+        const buyDataMain= document.getElementById("buyDataMain");
+        const dashContainer = document.getElementById("dashContainer");
+        const buyD= document.getElementById("box1");
+        const H= document.getElementById("H");
+        const dashboard= document.getElementById("dashboard");
+        const bdata = document.getElementById("bdata");
+        const box2= document.getElementById("box2");
+        const airtimePage= document.getElementById("airtimePage");
+        const bairtime = document.getElementById("bairtime");
+        const box3 = document.getElementById("box3");
+        const CableSUb = document.getElementById("CableSUb");
+        const csub = document.getElementById("csub");
+        const profil = document.getElementById("profile");
+        const profilePage = document.getElementById("profilePage");
+
+profil.addEventListener('click', function(){
+    dashContainer.style.display = "none";
+    buyDataMain.style.display = "none";
+    airtimePage.style.display = "none"
+    profilePage.style.display = "block";
+    
+
+    
+})
+bdata.addEventListener('click', function() {
+    dashContainer.style.display = "none";
+    buyDataMain.style.display = "block";
+    buyDataMain.style.marginLeft = "3em";
+    airtimePage.style.display = "none";
+    profilePage.style.display = "none";   
+})
+buyD.addEventListener('click', function() {
+    dashContainer.style.display = "none";
+    buyDataMain.style.display = "block";
+     buyDataMain.style.marginLeft = "4em";
+     
+    profilePage.style.display = "none";
+  })
+dashboard.addEventListener('click', function(){
+    dashContainer.style.display = "block";
+    buyDataMain.style.display = "none";
+    
+    profilePage.style.display = "none";
+    buyDataMain.style.display ="none";
+    airtimePage.style.display = "none";
+    CableSUb.style.display ="none";
+})
+function sub(){
+    Swal.fire({
+  title: "Are you show the Number is correct?",
+  showDenyButton: true,
+  confirmButtonText: "Continue",
+  denyButtonText: `Recheck`
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    Swal.fire("Send", "", "success");
+    
+    location.reload();
+  } else if (result.isDenied) {
+    Swal.fire("Transaction Fail");
+  }
+});
+}
+// Airtime -------------------------------------------------------------------------- 
+box2.addEventListener('click', function(){
+airtimePage.style.display = "block"
+airtimePage.style.marginLeft = "3em"
+dashContainer.style.display = "none";
+
+profilePage.style.display = "none";
+})
+bairtime.addEventListener('click', function(){
+airtimePage.style.display = "block"
+airtimePage.style.marginLeft = "3em"
+dashContainer.style.display = "none";
+buyDataMain.style.display = "none";
+CableSUb.style.display ="none";
+
+profilePage.style.display = "none";
+})
+csub.addEventListener('click', function(){
+    CableSUb.style.display = ("block"); 
+    dashContainer.style.display = "none";
+    airtimePage.style.display = "none";
+    CableSUb.style.marginLeft = "3em"
+    dashContainer.style.display = "none";
+    buyDataMain.style.display = "none";
+    
+    profilePage.style.display = "none";  
+})
+box3.addEventListener('click', function(){
+    CableSUb.style.display = ("block"); 
+    dashContainer.style.display = "none";
+    airtimePage.style.display = "none";
+    
+    profilePage.style.display = "none";
+    CableSUb.style.marginLeft = "3em"
+    dashContainer.style.display = "none";
+    buyDataMain.style.display = "none";
+   
+})
+function transactionHistory() {
+    // Hide other sections
+    document.getElementById('buyDataMain').style.display = "none";
+    document.getElementById('airtimePage').style.display = "none";
+    document.getElementById('CableSUb').style.display = "none";
+    
+    profilePage.style.display = "none";
+
+    // Show the transaction history section
+    const transactionHistoryContainer = document.getElementById('transactionHistory');
+    if (transactionHistoryContainer) {
+        transactionHistoryContainer.style.display = "block";
+    } else {
+        Swal.fire({
+            icon: 'info',
+            title: 'Transaction History',
+            text: 'Please add a section for transaction history in the HTML.',
+        });
+    }
+}
+        const loadingDuration = 10; // 3000 milliseconds = 3 seconds
+
+        // Function to hide the loading animation
+        function hideLoading() {
+            const loading = document.getElementById('loading');
+            loading.style.display = "none";
+        }
+
+        // Hide the loading animation after the fixed duration
+        setTimeout( loadingDuration);
+
+        // Also hide the loading animation once the page is fully loaded
+        window.addEventListener('load', () => {
+            hideLoading();
+        });
+
+        // purchase data enable 
+        const network =document.getElementById("network");
+        const planType =document.getElementById("planType");
+        const php = document.getElementById("php");
+        const amount = document.getElementById("amount");
+        const php1 = document.getElementById("php1");
+        const plan = document.getElementById("plan");
+        const sNetwork = document.getElementById("sNetwork");
+        const pType = document.getElementById("pType");
+
+        function get(network){
+        if(network !=php){
+            planType.disabled = false;
+        
+        } 
+        
+    }
+
+    function getVa(planType){
+        if(planType!=php1){
+            amount.disabled= false;
+        }
+    }
+    function getAir(plan){
+        if(plan!=sNetwork){
+            pType.disabled= false;
+        }
+    }
+    </script>
+</body>
+</html>

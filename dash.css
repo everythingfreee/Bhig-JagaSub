@@ -1,0 +1,491 @@
+.loading-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.loading-wrapper .loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/*================================== Dashbord =======================*/
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(220, 219, 219);
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background-color: #5879e6;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  position: relative;
+}
+#userName2 {
+  text-transform: lowercase;
+}
+#userFullName {
+  text-transform: uppercase;
+}
+.header .user-info {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.header .user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.sidebar {
+  height: 100%;
+  width: 15em;
+  position: fixed;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-right: 1%;
+  padding-left: 0;
+  padding-top: 60px;
+}
+#userFullName {
+  background-color: #5879e6;
+  width: 300px;
+  padding: 15px 5px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+  margin: 30px;
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(90, 87, 87);
+  display: block;
+  transition: 0.3s;
+  background-color: transparent;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+  padding: 16px;
+  margin-left: 15em;
+}
+.H {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 8px;
+}
+.div:hover {
+  cursor: pointer;
+}
+#dp {
+  width: 40px;
+  background-color: white;
+}
+.div div {
+  width: 30px;
+  height: 5px;
+  margin-top: 5px;
+}
+.dash-container {
+  background-color: rgb(220, 219, 219);
+  padding: 0;
+  margin: 20px;
+  height: 75vh;
+  width: 75vw;
+  margin-left: 15em;
+}
+i,
+.general ul li {
+  font-style: normal;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #5879e6;
+}
+h4,
+.general ul li {
+  margin: 3px;
+  padding: 20px 30px;
+}
+h4 {
+  color: rgb(149, 147, 147);
+}
+.general ul :hover {
+  cursor: pointer;
+  background-color: #bccafa;
+  border-radius: 10px;
+}
+/*================= Box ================*/
+.box {
+  width: 400px;
+  height: 200px;
+  font-family: sans-serif;
+  font-size: 30px;
+  color: black;
+  font-weight: bolder;
+  background-color: white;
+  align-content: end;
+  padding: 3px 50px;
+  margin: 18px;
+  border-radius: 20px;
+  box-shadow: 0 2px red;
+  transition: 3s;
+  cursor: pointer;
+}
+.box:hover {
+  background-color: rgba(187, 186, 186, 0.725);
+  box-shadow: 0 2px white;
+}
+.box-container {
+  position: absolute;
+}
+.cont {
+  display: flex;
+}
+.box i {
+  font-size: 100px;
+  padding: 30px 0 10px 100px;
+}
+.fund-box {
+  width: 400px;
+  height: 150px;
+  background-color: skyblue;
+  padding: 10px 40px;
+  margin: 20px;
+  border-radius: 20px;
+}
+.fund-box1 form{
+  background-color: black;
+}
+
+.fund-box1 {
+  background-color: white;
+  width: 200px;
+  height: 100px;
+  padding: 10px 40px;
+  margin: 20px;
+  border-radius: 20px;
+}
+#wBalance {
+  font-size: 30px;
+  font-weight: bolder;
+  padding-top: 10px;
+}
+.h7 {
+  font-size: 20px;
+}
+.fund-box h6 {
+  font-size: 30px;
+}
+.fWallet {
+  background-color: rgb(65, 246, 65);
+  width: 30vw;
+  height: 40px;
+  color: rgb(8, 68, 8);
+  font-weight: bolder;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 2px white;
+}
+.fWallet:hover {
+  background-color: rgb(8, 68, 8);
+  color: rgb(65, 246, 65);
+  cursor: pointer;
+}
+/*================== Phone View======*/
+@media only screen and (max-width: 800px) {
+  .fund-box {
+    width: 50vw;
+    height: 100%;
+  }
+  .box {
+    width: 50px;
+  }
+  .box i {
+    font-size: 90px;
+    padding: 10px 0 5px 5px;
+  }
+  h5 {
+    font-size: 10px;
+    margin: 5px;
+  }
+  .sidebar {
+    width: 0;
+  }
+  #main {
+    margin-left: 0;
+    width: 100%;
+  }
+  .iconic {
+    background-color: white;
+  }
+  #dashContainer {
+    width: 0;
+    margin: 0;
+  }
+  .H {
+    display: none;
+  }
+  #buyDataMain {
+    width: fit-content;
+    margin-left: -1.3em;
+  }
+  body{
+    width: 90vw;
+  }
+}
+/*========================Fund Wallet===============*/
+#fundAmount {
+  width: 250pxpx;
+  height: 30px;
+  border: none;
+  color: black;
+  background-color: white;
+  border-bottom: 1px solid rgb(65, 246, 65);
+  background-color: transparent;
+  margin-bottom: 2px;
+}
+#fundAmount:focus {
+  background-color: white;
+  outline: transparent;
+  border-bottom: 2px solid white;
+}
+.btn1 {
+  width:30vw;
+  height: 30px;
+  background-color: rgb(80, 245, 80);
+  border: none;
+  border-top-right-radius: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(9, 38, 9);
+  cursor: pointer;
+  box-sizing: 3px 2px 2px 4px white;
+}
+
+.fund-box2 {
+  width: 500px;
+  background-color: skyblue;
+  padding: 70px;
+  height: 100px;
+  display: none;
+}
+#fundbox1 {
+  display: none;
+}
+.earnBox {
+  width: max-content;
+  height: 200px;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 18px;
+  font-size: 10px;
+  background-color: rgba(127, 255, 212, 0.329);
+}
+.earnBox input {
+  border-color: rgba(0, 0, 0, 0.137);
+  background-color: transparent;
+  width: 30w;
+  padding: 10px;
+  height: 30px;
+}
+input:focus {
+  outline: none;
+  border-bottom: solid 1px black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+#referal {
+  width: 150px;
+  height: 55px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#buyDataMain {
+  margin-left: 20em;
+  display: none;
+}
+/*================ Buy Data==============*/
+select {
+  width: 40em;
+  padding: 10px;
+  height: 4em;
+  border-radius: 10px;
+  font-size: 15px;
+  border-color: rgba(0, 0, 0, 0.301);
+}
+option {
+  font-size: 15px;
+}
+form {
+  padding-top: 10px;
+}
+.form {
+  padding: 3em;
+  background-color: white;
+  border-radius: 10px;
+  width: 40em;
+  margin: 3em;
+  margin-left: 15em;
+}
+.input-buydata input {
+  width: 38em;
+  height: 1.7em;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 15px;
+  border-color: rgba(0, 0, 0, 0.301);
+}
+.input-buydata input:focus {
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.301);
+  border: solid 1px;
+}
+.input-buydata {
+  width: 100%;
+  margin-top: 10px;
+}
+#submit , .submit{
+  background-color: #5879e6;
+  height: 3em;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  width: 30.2em;
+}
+.chebox .cheackbox {
+  width: 1.5em;
+  float: right;
+}
+.chebox {
+  width: 37em;
+  padding: 10px 0;
+}
+/*============= Buy Data Phone View =================*/
+@media only screen and (max-width: 800px) {
+ 
+  select {
+    width: 20em;
+    height: 3.5em;
+    margin-left: 0;
+  }
+  form {
+    padding-top: 10px;
+  }
+  .form {
+    padding: 1.2em;
+    width: 20em;
+    margin: .5em 0;
+  }
+  .input-buydata input {
+    width: 18em;
+  }
+  #submit {
+    font-size: 20px;
+    width: 15em;
+  }
+  .chebox .cheackbox {
+    width: 1em;
+    float: right;
+  }
+  .chebox {
+    width: 18em;
+    padding: 10px 0;
+  }
+  .input-buydata {
+    width: 5em;
+    margin-top: 10px;
+  }
+ }
+/*=====================Airtime================*/
+#airtimePage {
+  display: none;
+  margin-left: 15em;
+}
+/*==================== Cable SUb================*/
+#CableSUb {
+  display: none;
+  margin-left: 15em;
+}
+#profilePage{
+  margin:8em  10em;
+  z-index: 9999;
+  display: none;
+  position: fixed;
+  
+
+}
+
+
+/*====================== Profile =========*/
+
+.hero{
+  width:200px;
+  background-color: white;
+  text-align: center;
+  border-radius: 15px;
+  height: max-content;
+  padding: 35px;
+}
+#profileImg{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-top: 40px;
+ }
+
+label{
+  display: block;
+  width: 200px;
+  background-color: red;
+  color: white;
+  padding: 12px;
+  margin: 20px auto;
+  border-radius: 5px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#imagesChange{
+  display: none;
+}

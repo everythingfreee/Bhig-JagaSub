@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Dynamic drop down select menu </h2>
+    <div class="placeholder">
+        <p>select country: <span id="country"></span></p>
+        <p>Selected city: <span id="city"></span></p>
+    
+    </div>
+    <h3>pleace select your country and city</h3>
+    <form action="">
+        <select onchange="getCities(this.value)" name="contries" id="country" >
+            <option value="" id="not">choose a country </option>
+            <option value="England">England </option>
+            <option value="germany">Germany </option>
+            <option value="france">France </option>
+            <option value="span">Spain</option>
+        </select>
+    </form>
+    <select onchange="getCity(this.value)" name="contries" id="cit" disabled>
+        <option value="">choose a city</option>
+            <option value="England">England </option>
+            <option value="germany">Germany </option>
+            <option value="france">France </option>
+            <option value="span">Spain</option>
+    </select>
+        
+      <script>
+const country =document.getElementById("country");
+const cit =document.getElementById("cit");
+const not =document.getElementById("not");
+
+        function getCities(country){
+            if(country!= ""){
+                cit.disabled= false;
+            }
+            else if(country= not){
+                cit.disabled= true;
+            }
+        }
+
+
+
+      </script>
+</body>
+</html>

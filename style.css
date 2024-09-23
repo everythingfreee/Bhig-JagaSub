@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  
+  background-color: #5879e6;
+  background: linear-gradient(to right, white, rgb(8, 8, 209));
+}
+/*================================== Form =======================*/
+#signIn {
+  display: none;
+  margin: -200%;
+
+  
+}
+.body{
+  background-image:url(pexels-thatguycraig000-1563356.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  background-color: rgba(177, 25, 25, 0.521);
+  width: 450px;
+  display: block;
+  padding: 1.5rem;
+  margin: 10em auto;
+  border-radius: 10px;
+ }
+input {
+  width: 100%;
+  padding-left: 30px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border-bottom: solid 1px black;
+}
+.input-group i {
+  position: absolute;
+}
+input:focus {
+  background-color: transparent;
+  outline: transparent;
+  border-bottom: 2px solid rgb(48, 3, 3);
+}
+input::placeholder {
+  color: transparent;
+}
+label {
+  position: relative;
+  color:white;
+  left: 1.2em;
+  top: -1.3em;
+  cursor: auto;
+  transition: 0.3s ease all;
+}
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -3em;
+  color: rgb(48, 3, 3);
+  font-size: 15px;
+}
+.recover {
+  text-align: right;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+}
+.recover a {
+  text-decoration: none;
+  color: rgb(78, 78, 241);
+  font-weight: bolder;
+}
+.form-title {
+  text-align: center;
+  margin: 10px;
+}
+.recover a:hover {
+  color: rgba(87, 87, 250, 0.952);
+  text-decoration: underline;
+}
+.btn {
+  font-size: 1.1rem;
+  padding: 8px 0;
+  border-radius: 5px;
+  outline: none;
+  background: rgb(125, 125, 235);
+  color: white;
+  transition: 0.9s;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #07001f;
+}
+.or {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.icons {
+  text-align: center;
+}
+.icons i {
+  color: rgb(125, 125, 235);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: solid 2px #dfe9f5;
+  transition: 5s;
+  gap: 20px;
+}
+.icons i:hover {
+  background: #07002f;
+  font-size: 1.6rem;
+  border: 2px solid rgb(125, 125, 235);
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 4rem;
+  font-size: 15px;
+  font-weight: bold;
+  width: max-content;
+}
+button {
+  color: rgb(125, 125, 235);
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+}
+button:hover {
+  text-decoration: underline;
+  color: rgba(87, 87, 250, 0.952);
+}
+@media only screen and (max-width: 600px) {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    padding: 0;
+    display: flex;
+    background-color: transparent;
+    background: none;
+    height: max-content;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    box-sizing: none;
+
+    box-shadow: none;
+    padding: 50px;
+    margin: 0;
+
+  }
+}
+/*================================== Dashbord =======================*/
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background-color: #5879e6;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+
+  text-align: right;
+  position: relative;
+}
+
+.header .user-info {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.header .user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-right: 1%;
+  padding-left: 0;
+  padding-top: 60px;
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(90, 87, 87);
+  display: block;
+  transition: 0.3s;
+  background-color: red;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main {
+  transition: margin-right 0.5s;
+  padding: 16px;
+}
+.H {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 8px;
+}
+.div:hover {
+  cursor: pointer;
+}
+#dp {
+  width: 40px;
+  background-color: white;
+}
+.div div {
+  width: 30px;
+  height: 5px;
+  margin-top: 5px;
+  background-color: white;
+}
+
+/*------------------------Home-----------------------*/
+.homeCOntainer {
+  margin: 0;
+  padding:0;
+  background-image:url("pexels-thatguycraig000-1563356.jpg");
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-position:center;
+  background-size: cover;
+}
+nav {
+  justify-content: space-between;
+  display: flex;
+  background-color:rgba(87, 87, 250, 0.952);
+  align-items: center;
+  margin: 0;
+  padding: 10px 100px;
+
+}
+.welcome, .button-home{
+  padding:0 50px ;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.about .get-start,
+.about a {
+  color:white;
+  column-gap: 30px;
+}
+.about {
+  gap: 30px;
+}
+.welcome h2,
+.welcome p {
+  font-size: 50px;
+}
+
+.button-home {
+  display: block;
+  color: white;
+}
+.button-home button a{
+  color: white;
+}
+.button-home button{
+  background-color:rgba(87, 87, 250, 0.952);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40vh;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+ body{
+  overflow: hidden; 
+  width: 100%;
+  height: 100%;
+ }
+  .welcome h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  nav{
+    padding: 10px ;
+    font-size: 10px;
+  }
+  h3 {
+    font-size: 10px;
+    text-align: center;
+  }
+  .button-home button {
+    margin-left: 5%;
+    width: 60vw;
+    font-size: 15px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  span{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  h2{
+    font-size: 20px;
+  }
+}
+
+/*=====================Airtime================*/
+#airtimePage {
+  display: none;
+  margin-left: 15em;
+}
